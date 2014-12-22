@@ -1,0 +1,110 @@
+@CHARSET "ISO-8859-1";
+
+table {
+	font-size: 1em;
+}
+
+th {
+	padding: 5px;
+}
+
+td {
+	padding: 4px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #003300;
+	weight: bold;
+	text-decoration: underline;
+}
+
+#roundtrip {
+	display: none;
+}
+
+.filterArea {
+	vertical-align: top;
+	width: 200px;
+}
+
+input[type="radio"]:hover {
+	cursor: pointer;
+}
+
+.flightDetails{
+	
+}
+
+.reserveButton {
+	float: right;
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	width: 150px;
+	height: 35px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border: 1px solid Black;
+	background:-o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000) );	
+	background:-moz-linear-gradient( center top, #ff5656 5%, #7f0000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");	
+	background: -o-linear-gradient(top,#ff5656,7f0000);
+	background-color:#ff5656;
+	color: #FFF;
+}
+
+.reserveButton:hover {
+	cursor: pointer;
+	background:-o-linear-gradient(bottom, #7f0000 5%, #ff5656 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7f0000), color-stop(1, #ff5656) );	
+	background:-moz-linear-gradient( center top, #7f0000 5%, #ff5656 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#7f0000", endColorstr="#ff5656");	
+	background: -o-linear-gradient(top,#7f0000,#ff5656);
+	background-color:#7f0000;
+	color:#FFF;
+}
+
+.header {
+	background:-o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000) );	
+	background:-moz-linear-gradient( center top, #ff5656 5%, #7f0000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");	
+	background: -o-linear-gradient(top,#ff5656,7f0000);
+	background-color:#ff5656;
+	width: 100%;
+}
+
+.header > div:first-child {
+	margin-left: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-flex;
+	justify-content: flex-start;
+	width: 48%;
+}
+
+.header > div:last-child {
+	display: inline-flex;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.header p {
+	color: #FFFFFF;
+}
+
+#footerNote{
+	
+	text-align:center;
+	font-weight:Bold;
+	font-size:15px;
+	margin:0 auto;
+	
+	
+}

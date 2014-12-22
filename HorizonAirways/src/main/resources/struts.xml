@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="horizon.airways" extends="struts-default">
+
+	<global-results>  
+		<result name="error">errorpage.jsp</result>  
+	</global-results>  
+  
+	<global-exception-mappings>  
+		<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>  
+	</global-exception-mappings>  
+	
+	<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		<action name="login"
+			class="com.px1.horizonairways.action.AuthenticationAction" method="login">
+			<result>/index.jsp</result>
+		</action>
+		<action name="logout"
+			class="com.px1.horizonairways.action.AuthenticationAction" method="logout">
+			<result type="redirectAction">/index</result>
+		</action>
+		<action name="findflights" class="com.px1.horizonairways.action.FindFlightsAction">
+			<result>/flightdetailscapture.jsp</result>
+		</action>
+		<action name="flightdetails"
+			class="com.px1.horizonairways.action.FlightDetailsCaptureAction">
+			<result>/passengerdetails.jsp</result>
+		</action>
+		<action name="PassengerDetailsCapture"
+			class="com.px1.horizonairways.action.PassengerDetailsAction">
+			<result type="chain">ReservationCompletion</result>
+		</action>
+		<action name="ReservationCompletion"
+			class="com.px1.horizonairways.action.ReservationCompletionAction">
+			<result>/completion.jsp</result>
+		</action>
+		<action name="viewReports" class="com.px1.horizonairways.action.ViewReportsAction">
+			<result>/reports.jsp</result>
+		</action>
+		<action name="PassengerManifest"
+			class="com.px1.horizonairways.action.PassengerManifestAction">
+			<result>/passengerManifest.jsp</result>
+		</action>
+		<action name="SearchPassenger"
+			class="com.px1.horizonairways.action.PassengerSearchAction">
+			<result name="search">/passengerSearch.jsp</result>
+			<result name="success">/cancelcompletion.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>

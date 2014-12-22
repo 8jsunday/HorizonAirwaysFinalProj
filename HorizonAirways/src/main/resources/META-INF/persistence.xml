@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="db-persistence"
+		transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.px1.horizonairways.entity.User</class>
+		<class>com.px1.horizonairways.entity.Passenger</class>
+		<class>com.px1.horizonairways.entity.FlightDetails</class>
+		<class>com.px1.horizonairways.entity.ReservedFlight</class>
+		<properties>
+
+			<!-- =============================== -->
+			<!-- ===========DATABASE============ -->
+			<!-- =============================== -->
+
+			<!-- MySQL -->
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://192.168.1.200:3306/webshoppe" 
+				/> <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" 
+				/> <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect 
+				"/> -->
+
+
+			<!-- SQL SERVER 2012 -->
+			<property name="hibernate.connection.url"
+				value="jdbc:sqlserver://127.0.0.1:1433;databaseName=LA" />
+			<property name="hibernate.connection.driver_class"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2008Dialect" />
+
+			<!-- =============================== -->
+			<!-- =============LOGIN============= -->
+			<!-- =============================== -->
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="sa" />
+
+			<!-- =============================== -->
+			<!-- ===========OTHER PROPS========== -->
+			<!-- =============================== -->
+			<!-- automatically updates the schema, NOT RECOMENDED IN A PRODUCTION 
+				ENVIROMENT. Check user's grant permissions -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- Enables autocommit for JDBC pooled connections (it is not recommended) -->
+			<property name="hibernate.connection.autocommit" value="false" />
+
+			<!-- =============================== -->
+			<!-- ==============POOL============= -->
+			<!-- =============================== -->
+			<!-- Connection pool with Hibernate-C3P0 integration -->
+			<property name="hibernate.connection.provider_class"
+				value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.acquire_increment" value="5" />
+			<property name="hibernate.c3p0.idle_test_period" value="100" />
+			<property name="hibernate.c3p0.max_size" value="50" />
+			<property name="hibernate.c3p0.max_statements" value="0" />
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.timeout" value="100" /><!-- for 
+				idle connections, in seconds -->
+
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,272 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	font-family:"Arial", Helvetica, sans-serif;
+	
+}
+
+
+div{
+/* 	margin-bottom:5px; */
+	
+}
+
+label{
+display:block;
+	width:120px;
+	/* margin-right:20px;  */ 
+	white-space: nowrap;
+}
+
+input[type="text"], input[type="date"], textarea, input[type="email"] {
+	width:200px;
+	border:1px solid black;
+	background-color: White;
+	
+}
+
+textarea{
+	height:70px;
+	width:195px;
+	resize:none;
+}
+
+.submit, .horizonButton {
+	width: 100px;
+	height: 35px;
+	font-size: 1em;
+	font-weight: bold;
+	border: 1px solid Black;
+	background:-o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000) );	
+	background:-moz-linear-gradient( center top, #ff5656 5%, #7f0000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");	
+	background: -o-linear-gradient(top,#ff5656,7f0000);
+	background-color:#ff5656;
+	color: #FFF;
+	align
+}
+
+.submit:hover,.horizonButton:hover {
+	cursor: pointer;
+	background:-o-linear-gradient(bottom, #7f0000 5%, #ff5656 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7f0000), color-stop(1, #ff5656) );	
+	background:-moz-linear-gradient( center top, #7f0000 5%, #ff5656 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#7f0000", endColorstr="#ff5656");	
+	background: -o-linear-gradient(top,#7f0000,#ff5656);
+	background-color:#7f0000;
+	color:#FFF;
+}
+
+input[type="date"]{
+	text-transform:uppercase;
+}
+
+.header {
+	background:-o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000) );	
+	background:-moz-linear-gradient( center top, #ff5656 5%, #7f0000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");	
+	background: -o-linear-gradient(top,#ff5656,7f0000);
+	background-color:#ff5656;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+table{
+	border-collapse: collapse;
+}
+
+table,tr,td{
+	border: solid 1px black ;
+}
+
+td{
+
+	min-height:10px;
+	min-width:10px;
+	padding: 2px; 
+}
+
+.seat{
+	cursor:pointer;
+}
+
+.occupied.seat{
+	background-color: #dd0000;
+}
+
+.selected{
+	background-color: #00ff00 !important;
+}
+
+.available.seat{
+	background-color: #dddddd;
+}
+
+div.area{
+	width: 100%;
+	display: flex;
+	justify-content:center;
+}
+
+#modalContainer{
+	background: rgba(0,0,0,0.7);
+	z-index: 1;
+	position: fixed;
+	top: 0px;
+	left:0px;
+	min-width:100%;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	visibility: hidden;
+}
+
+#seatPlanModal{
+	background: blue;
+	min-height:640px;
+	width:50%;
+	max-height: 640px;
+	max-width: 50%;
+	overflow: auto;
+	font-size: 10px;
+	padding: 10px 0px;
+	background: #ffffff;
+	    overflow-y:scroll; 
+
+	
+}
+
+#modalContainer .buttonDiv{
+	display: flex;
+	max-width:90%;
+	justify-content: flex-end;
+	font-size:12px;
+	padding: 10px 0px;
+}
+
+.passengerDetails {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.fieldsContainer{
+
+}
+
+.fieldsContainer > div{
+ 	padding-bottom: 5px; 
+}
+.headerDiv, .submitDiv{
+ 	padding: 5px; 
+}
+.submitDiv{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.passengerDetails form{
+	min-width: 90%;
+	max-width: 90%;
+}
+
+.detailsDiv > div{
+
+	display: inline-flex;
+	flex-direction:column;
+
+}
+.flightPickerDivContainer{
+/* 	margin-left: 80px; */
+}
+
+.flightPickerDiv:last-child{
+	
+}
+.detailsDiv > div > div:not(.flightPickerDiv){
+	display: flex;
+	flex-direction:row;
+	
+}
+
+ div.remove{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+
+
+
+div.remove:hover{
+	color:red;
+	cursor: pointer;
+}
+
+.detailsDiv > div > div{
+	padding: 5px;
+}
+.flightPickerDiv:first-child{
+	margin-right: 20px;
+}
+.detailsDiv{
+
+	display: flex;
+	justify-content:space-between;
+	align-items:flex-start;
+	border-bottom: solid 1px black;
+	margin-top:10px;
+}
+
+.removeDiv{
+
+	min-width: 25px;
+	min-height:25 px;
+}
+input[type="text"].seatPicker{
+	width: 40px;
+	text-align: center;
+}
+input[type="text"].seatClass{
+	width: 80px;
+	text-align: center;
+}
+
+input[type="text"],input[type="email"], label  {
+	padding: 3px;
+}
+
+.headerDiv{
+	border-bottom: solid 1px black;
+	display:flex;
+	direction:column;
+	justify-content: space-between;
+}
+
+.headerDiv > div:last-child{
+	font-size: 12px;
+	font-style: italic;
+	cursor: pointer;
+}
+
+.headerDiv > div:last-child:hover{
+	text-decoration: underline;
+	color: blue;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.passengerDetailNo{
+	display: none !important;
+}
+
+
